@@ -8,7 +8,7 @@ export default services = {
       .then(res => res.json())
       .then(json =>
         this.controller({
-          action: actions.INTIAL_ITEMS_LOADED,
+          action: actions.INITIAL_ITEMS_LOADED,
           payload: json
         })
       );

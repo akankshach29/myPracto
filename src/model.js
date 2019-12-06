@@ -2,7 +2,9 @@
 
 const state = {
   items: [],
-  itemsLoaded: false
+  itemsLoaded: false,
+  sortBy: "lowToHigh",
+  filterBy: "All"
 };
 
 export default state;

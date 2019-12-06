@@ -1,12 +1,30 @@
-#app-body {
-  padding: 20px;
+body {
+  margin: 0px;
+  font: 400 system-ui;
+}
+.header {
+  display: block;
+  background-color: #3aa0ed;
+  padding: 1px 20px;
+  color: white;
+}
+h1 {
+  font: 400 32px system-ui;
+  margin: 10px;
+}
+.header-items {
+  display: flex;
+  justify-content: space-between;
+}
+#view {
+  padding: 2%;
 }
 .listing-body {
   border: 1px solid rgb(190, 188, 188);
   padding: 20px;
   display: inline-block;
-  width: 90%;
-  margin: 2px;
+  width: 95%;
+  margin: 0.5%;
 }
 .time-slots {
   display: flex;
@@ -25,9 +43,14 @@ button[id="book"] {
   color: white;
   font-size: 15px;
   border-color: #24a0ed;
+  box-shadow: 1px 1px #d6d2d2;
+  width: 90px;
+}
+.book-now {
+  padding-top: 10px;
 }
 .sort-price {
-  margin: 10px;
+  margin: 5px 0px;
   display: block;
-  padding: 20px;
+  padding: 10px;
 }
