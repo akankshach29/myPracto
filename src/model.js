@@ -4,7 +4,8 @@ const state = {
   items: [],
   itemsLoaded: false,
   sortBy: "lowToHigh",
-  filterBy: "All"
+  filterBy: "All",
+  filterByRating: "1"
 };
 
 export default state;

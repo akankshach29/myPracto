@@ -9,7 +9,7 @@ body {
   color: white;
 }
 h1 {
-  font: 400 32px system-ui;
+  font: 100 32px system-ui;
   margin: 10px;
 }
 .header-items {
@@ -20,7 +20,7 @@ h1 {
   padding: 2%;
 }
 .listing-body {
-  border: 1px solid rgb(190, 188, 188);
+  box-shadow: 2px 2px 5px #0d293e;
   padding: 20px;
   display: inline-block;
   width: 95%;
@@ -51,6 +51,6 @@ button[id="book"] {
 }
 .sort-price {
   margin: 5px 0px;
-  display: block;
+  display: inline;
   padding: 10px;
 }

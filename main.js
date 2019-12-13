@@ -6,7 +6,9 @@ const app = {
   sortByPrice(value) {
     controller({ action: actions.SORT_BY_PRICE, payload: value });
   },
-
+  sortByRating(value) {
+    controller({ action: actions.FILTER_BY_RATING, payload: value });
+  },
   filterByCity(value) {
     controller({ action: actions.FILTER_BY_CITY, payload: value });
   },

@@ -54,7 +54,7 @@ export default function render() {
     <div id="view">  
       ${Loader()}  
       <div class="sort-price">
-        <label for="sortPrice">Sort:</label>
+        <label for="sortPrice">Sort Price:</label>
         <select id="sortPrice" onchange="app.sortByPrice(value)">
           <option value="lowToHigh" ${
             state.sortBy == "lowToHigh" ? "selected" : ""
@@ -64,10 +64,34 @@ export default function render() {
           }>High to Low</option>
         </select>
       </div>
-      <div>${state.items
+
+        <label for="sortPrice">Sort Rating:</label>
+        <select id="sortPrice" onchange="app.sortByRating(value)">
+          <option value="1" ${
+            state.sortByRating == "1" ? "selected" : ""
+          }>1 star & above</option>
+          <option value="2" ${
+            state.sortByRating == "2" ? "selected" : ""
+          }>2 star & above</option>
+          <option value="3" ${
+            state.sortByRating == "3" ? "selected" : ""
+          }>3 star & above</option>
+          <option value="4" ${
+            state.sortByRating == "4" ? "selected" : ""
+          }>4 star & above</option>
+        </select>
+      </div>
+      <div>
+      ${state.items
         .filter(clinic =>
           state.filterBy != "All" ? clinic.city === state.filterBy : true
         )
+        .filter(clinic => {
+          if (state.filterByRating === "1") {
+            return true;
+          }
+          return clinic.rating >= state.filterByRating;
+        })
         .map(Clinic)
         .join("")}</div>
     </div>
